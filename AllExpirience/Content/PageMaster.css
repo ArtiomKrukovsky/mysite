@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.linkabout {
+    color: #808080;
+}
+
+    .linkabout:hover {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+glyphicon.glyphicon-user:hover{
+    color: red;
+}
+
+.block {
+    width: 350px;
+    height: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.06);
+    padding: 8px;
+    padding-left: 0px;
+    border: 5px solid rgba(191, 191, 191, 0.15);
+}

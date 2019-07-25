@@ -1,0 +1,52 @@
+﻿body {
+}
+
+.text-line {
+    padding-top: 8%;
+    font-size: 18px;
+}
+
+.text-block {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.06);
+    padding: 6px;
+    padding-left: 0px;
+    border: 5px solid rgba(191, 191, 191, 0.15);
+}
+
+.name {
+    font-weight: 600;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+}
+
+.img-item {
+    width: 260px;
+    height: 260px;
+    border: 5px solid rgba(191, 191, 191, 0.15);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.06);
+    padding: 10px;
+    margin-right: 30%;
+}
+
+.img-item:hover {
+    border: 1px solid rgba(136, 193, 255, 0.77);
+}
+
+h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.column-contect {
+    padding-top: 70px;
+}
+
+.portfolio {
+    font-weight: 600;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    text-align: center;
+}
+

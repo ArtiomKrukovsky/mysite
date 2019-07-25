@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/PageMaster.css" type="text/css" />
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/StyleMain.css" type="text/css" />
+</head>
+<body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Main", "Home", "Main", new { area = "" }, new { @class = "navbar-brand", @style = "font-size:22px; color:#539cf6; font-weight:bold;" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li style="font-size:17px">@Html.ActionLink("Contacts", "Contact", "Main")</li>
+                        <li style="font-size:17px">
+                            <a class="linkabout dropdown-toggle" data-toggle="dropdown">About Me <span class="caret"></span></a>
+                            <ul style="color:#000000" class="dropdown-menu" role="menu">
+                                <li style="color:#000000"><a href="/Main/AboutMeProgramming">Programming</a></li>
+                                <li><a href="#">Music</a></li>
+                                <li><a href="#">Sport</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/Main/OtherInformation">Other information...</a></li>
+                            </ul>
+                        </li>
+
+                        <li style="font-size:17px">
+                            @Html.ActionLink("Help", "Help", "Main")
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="icon-bar">
+                            <a href="https://github.com/ArtiomKrukovsky" class="navbar-link" style="padding:0px; padding-top:8px; margin-left:6px;">
+                                <img style="width:35px; border: 1px solid rgba(209, 209, 209, 0.56)" src="~/Content/Images/github.png" />
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="https://www.facebook.com/" class="navbar-link" style="padding:0px; padding-top:8px; margin-left:6px;">
+                                <img style="width:35px; border: 1px solid rgba(209, 209, 209, 0.56)" src="~/Content/Images/facebook.png" />
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="navbar-link" style="padding:0px; padding-top:15px; margin-left:15px; font-size:18px;">
+                                Sing in <i class="glyphicon glyphicon-user" ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p style="color:#630505; text-align:center">Сайт о разработчике Круковском</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿body {
+}
+
+.block-contact{
+    border: 1px solid rgb(128, 128, 128); 
+    min-height:530px;
+}
+
+.contact-person{
+    font-size: 1.5em;
+    margin: 20px 0;
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.photo {
+    border-radius: 112.5px;
+}
+
+.data {
+    font-size: 1.285em;
+    margin: 10px 0 20px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.row-contact{
+    text-align: center;
+}
+
+.imgs-contact{
+    display:inline;
+}
+
+.img:hover {
+    border: 1px solid rgb(76, 255, 0);
+}
+
+.phone {
+    font-size: 1.270em;
+    margin: 10px 0 20px;
+    line-height: 27px;
+    font-weight: 400;
+}
