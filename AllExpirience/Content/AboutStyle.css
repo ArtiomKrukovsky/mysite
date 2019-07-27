@@ -26,3 +26,44 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
 }
+
+.image{
+    width: 90%;
+}
+
+.title-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 5%;
+}
+
+.title-text.right{
+    padding-left: 60%;
+}
+
+.text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 3%;
+}
+
+.text.right{
+    padding-left: 2%;
+    padding-right: 6%;
+}
+
+h2.las {
+    padding-left: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.background {
+    margin: 0 15% 0 15%;
+    padding-right: 5%;
+    background: url('Images/42ed6ba3b1c34698880272577a2a06dc.jpg') no-repeat center;
+    border: 2px solid #9c9c9c;
+}
