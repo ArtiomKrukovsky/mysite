@@ -36,7 +36,7 @@ namespace AllExpirience.Controllers
             return View();
         }
 
-        public ActionResult AboutMeSport()
+        public ActionResult AboutMeSkills()
         {
             return View();
         }

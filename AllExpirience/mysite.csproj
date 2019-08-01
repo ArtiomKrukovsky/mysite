@@ -187,6 +187,8 @@
     <Content Include="Views\Main\AboutMeProgramming.cshtml" />
     <Content Include="Views\Main\AboutMeMusic.cshtml" />
     <Content Include="Views\Main\Help.cshtml" />
+    <Content Include="Views\Main\AboutMeLiterature.cshtml" />
+    <Content Include="Views\Main\AboutMeSkills.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
