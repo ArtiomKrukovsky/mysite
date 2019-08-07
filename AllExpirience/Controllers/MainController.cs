@@ -1,4 +1,5 @@
 ﻿using AllExpirience.Models;
+using mysite.Domain.Interface;
 using System.Web.Mvc;
 
 namespace AllExpirience.Controllers
@@ -41,12 +42,17 @@ namespace AllExpirience.Controllers
             return View();
         }
 
-        HelpDBContext context = new HelpDBContext();
+        private IUnitOfWork context;
+
+        public MainController(IUnitOfWork unitOfWork)
+        {
+            context = unitOfWork;
+        }
 
         [HttpGet]
         public ActionResult Help()
         {
-            SelectList list = new SelectList(context.Countries, "CountryId", "Name");
+            SelectList list = new SelectList(context.Countries.GetAll(), "CountryId", "Name");
             ViewBag.countrylist = list;
             return View();
         }
@@ -60,7 +66,7 @@ namespace AllExpirience.Controllers
                 context.SaveChanges();
                 TempData["msg"] = "<script>alert('Your request has been successfully added.'); window.location = '/Main/Home';</script>";
             }
-            SelectList list = new SelectList(context.Countries, "CountryId", "Name");
+            SelectList list = new SelectList(context.Countries.GetAll(), "CountryId", "Name");
             ViewBag.countrylist = list;
             return View(help);
         }

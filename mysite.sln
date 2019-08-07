@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mysite", "AllExpirience\mysite.csproj", "{889A7D16-8442-4630-971A-217A5183DCD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mysite.API", "AllExpirience\mysite.API.csproj", "{889A7D16-8442-4630-971A-217A5183DCD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysite.Domain", "mysite.Domain", "{F47BE785-D8A7-44B2-A129-1A25141783B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mysite.Domain", "mysite.Domain\mysite.Domain.csproj", "{864BC7DE-A4FD-462B-905D-6C5B65556E53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{889A7D16-8442-4630-971A-217A5183DCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{889A7D16-8442-4630-971A-217A5183DCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{889A7D16-8442-4630-971A-217A5183DCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{864BC7DE-A4FD-462B-905D-6C5B65556E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864BC7DE-A4FD-462B-905D-6C5B65556E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864BC7DE-A4FD-462B-905D-6C5B65556E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864BC7DE-A4FD-462B-905D-6C5B65556E53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{864BC7DE-A4FD-462B-905D-6C5B65556E53} = {F47BE785-D8A7-44B2-A129-1A25141783B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F44261F9-48F3-48A4-A677-45BF415140E8}

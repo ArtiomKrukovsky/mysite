@@ -1,4 +1,8 @@
 ﻿using AllExpirience.Models;
+using AllExpirience.Util;
+using Ninject;
+using Ninject.Modules;
+using Ninject.Web.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,6 +23,11 @@ namespace AllExpirience
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // внедрение зависимостей
+            NinjectModule registrations = new NinjectRegistration();
+            var kernel = new StandardKernel(registrations);
+            DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }
     }
 }
