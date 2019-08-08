@@ -51,8 +51,8 @@
                             </a>
                         </li>
                         <li class="">
-                            <a href="#" class="navbar-link" style="padding:0px; padding-top:15px; margin-left:15px; font-size:18px;">
-                                Sing in <i class="glyphicon glyphicon-user" ></i>
+                            <a href="#" data-toggle="modal" data-target="#myModel" class="navbar-link" style="padding:0px; padding-top:15px; margin-left:15px; font-size:18px;">
+                                @User.Identity.Name <i class="glyphicon glyphicon-user" ></i>
                             </a>
                         </li>
                     </ul>
@@ -61,8 +61,29 @@
             </div>
         </div>
 
+        <div id="myModel" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">x</button>
+                        <h4 class="modal-title">Подтверждение выхода из учётной записи</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        Вы действительно хотите выйти из данной учётной записи?!
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-info" data-dismiss="modal">NO</button>
+                        @Html.ActionLink("YES", "Logout", "Account", null, new { @class = "btn btn-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="container body-content">
+
             @RenderBody()
             <hr />
             <footer>

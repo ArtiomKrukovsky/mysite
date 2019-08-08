@@ -4,6 +4,7 @@ using System.Web.Mvc;
 
 namespace AllExpirience.Controllers
 {
+    [Authorize]
     public class MainController : Controller
     {
 

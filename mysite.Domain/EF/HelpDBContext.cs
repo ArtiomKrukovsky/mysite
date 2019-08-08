@@ -1,18 +1,45 @@
 ﻿namespace AllExpirience.Models
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Microsoft.AspNet.Identity.Owin;
+    using Microsoft.Owin;
     using System;
     using System.Data.Entity;
     using System.Linq;
 
-    public class HelpDBContext : DbContext
+    public class ApplicationUser : IdentityUser
+    {
+    }
+
+    public class HelpDBContext : IdentityDbContext<ApplicationUser>
     {
         public HelpDBContext()
             : base("name=HelpDBContext")
+        {}
+
+        public static HelpDBContext Create()
         {
+            return new HelpDBContext();
         }
 
         public DbSet<Country> Countries { get; set; }
         public DbSet<Help> Helps { get; set; }
+    }
+
+    public class ApplicationUserManager : UserManager<ApplicationUser>
+    {
+        public ApplicationUserManager(IUserStore<ApplicationUser> store)
+                : base(store)
+        {
+        }
+        public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options,
+                                                IOwinContext context)
+        {
+            HelpDBContext db = context.Get<HelpDBContext>();
+            ApplicationUserManager manager = new ApplicationUserManager(new UserStore<ApplicationUser>(db));
+            return manager;
+        }
     }
 
     public class Init: DropCreateDatabaseAlways<HelpDBContext>
